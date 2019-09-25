@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
       </div>
-        <div class="col-xl-5 col-lg-6 col-md-4">
+        <div class="col-xl-7 col-lg-8 col-md-6">
         <div class="card shadow o-hidden border-0 shadow-lg my-5">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Tanggal Penting</h6>

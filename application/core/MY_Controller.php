@@ -10,7 +10,7 @@ class MY_Controller extends CI_Controller {
     
     function __construct() {
         parent::__construct();
-        $this->ci_minifier->init(1);
+        $this->ci_minifier->init(0);
     }    
     
     public function _remap($method, $params = array()) {
@@ -19,6 +19,15 @@ class MY_Controller extends CI_Controller {
 
     protected function makeview($page, array $data) {
         $data['contents'] = $this->load->view($page, $data, true);
+        $data['container_type'] = "container";
+        $data['use_bg'] = "bg-gradient-primary";
+        $this->load->view('base/v_base', $data);
+    }
+
+    protected function make_dashboard($title, $page, array $data) {
+        $data['main_view'] = "";
+        $data['container_type'] = "wrapper";
+        $data['contents'] = $this->load->view('base/v_content_wrapper', $data, true);
         $this->load->view('base/v_base', $data);
     }
     

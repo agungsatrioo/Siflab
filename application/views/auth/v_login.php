@@ -1,5 +1,9 @@
-  <div class="container">
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<body>
 
+    <div class="container">
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -11,20 +15,28 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="p-5">
+                        <?php if(!empty($error)) { ?>
+    <div class="alert alert-danger"><?= $error ?></div>
+<?php } ?>
+
+
+<?php if(!empty($identity)) { ?>
+    <div class="alert alert-success"><?= $identity ?></div>
+<?php } ?>
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <form class="user">
+                  <?= @$form_open ?>
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="text" name="inputNI" id="inputNI" class="form-control form-control-user"  placeholder="Identitas">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" name="inputPassword" id="inputPassword" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
                       Login
-                    </a>
-                  </form>
+                    </button>
+                 <?= @$form_close ?>
                 </div>
               </div>
             </div>
@@ -33,6 +45,8 @@
 
       </div>
 
-    </div>
-
   </div>
+    </div>
+    <script src="<?= base_url('media/sbadmin2/js/sb-admin-2.min.js') ?>" type="text/javascript"></script>
+</body>
+

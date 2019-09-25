@@ -9,7 +9,12 @@
         
         <title><?= @$title ?></title>
         <link rel="stylesheet" href="<?= base_url('media/sbadmin2/css/sbadmin.css') ?>">
+        <link rel="stylesheet" href="<?= base_url('media/custom.css') ?>">
         <?= @$additional_css ?>
     </head>
-    <?= @$contents ?>
+    <body class="bg-gradient-primary">
+        <?= @$contents ?>
+        <script src="<?= base_url('media/sbadmin2/js/sb-admin-2.min.js') ?>" type="text/javascript"></script>
+    </body>
+
 </html>

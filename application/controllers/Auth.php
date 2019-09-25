@@ -14,15 +14,18 @@ class Auth extends MY_Controller {
             case "do_login":
                 $this->do_login();
                 break;
+            default:
+                parent::_remap($method, $params);
         }
     }
     
-    public function login_page() {
+    private function login_page() {
         $data['title'] = "Login";
+        $data['login_url'] = base_url('auth/do_login');
         $this->makeview('auth/v_login',$data);
     }
     
-    public function do_login() {
+    private function do_login() {
         echo $this->input;
     }
 }

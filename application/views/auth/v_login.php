@@ -1,13 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<body>
-
-    <div class="container">
-    <!-- Outer Row -->
+<body class="bg-gradient-primary">
+  <div class="container">
     <div class="row justify-content-center">
-
-      <div class="col-xl-5 col-lg-6 col-md-4">
+        <div class="col-xl-4 col-lg-4 col-md-3">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
@@ -15,16 +12,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
               <div class="col-lg-12">
                 <div class="p-5">
-                        <?php if(!empty($error)) { ?>
-    <div class="alert alert-danger"><?= $error ?></div>
-<?php } ?>
+                    <?php if(!empty($error)) { ?>
+                        <div class="alert alert-danger"><?= $error ?></div>
+                    <?php } ?>
 
 
-<?php if(!empty($identity)) { ?>
-    <div class="alert alert-success"><?= $identity ?></div>
-<?php } ?>
+                    <?php if(!empty($identity)) { ?>
+                        <div class="alert alert-success"><?= $identity ?></div>
+                    <?php } ?>
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">SIFLAB</h1>
                   </div>
                   <?= @$form_open ?>
                     <div class="form-group">
@@ -44,9 +41,97 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
       </div>
-
-  </div>
+        <div class="col-xl-5 col-lg-6 col-md-4">
+        <div class="card shadow o-hidden border-0 shadow-lg my-5">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Tanggal Penting</h6>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Ujian Proposal
+                            <div class="table-responsive">
+                                <table class="table table-bordered"  width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Jadwal</th>
+                                            <th>Tanggal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Pendaftaran</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Penyerahan Berkas</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ujian</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li>Ujian Komprehensif
+                            <div class="table-responsive">
+                                <table class="table table-bordered"  width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Jadwal</th>
+                                            <th>Tanggal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                            <td>Pendaftaran</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Penyerahan Berkas</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ujian</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                        <li>Ujian Munaqosah
+                            <div class="table-responsive">
+                                <table class="table table-bordered"  width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Jadwal</th>
+                                            <th>Tanggal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                            <td>Pendaftaran</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Penyerahan Berkas</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ujian</td>
+                                            <td>25-30 September 2019</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+        </div>
     </div>
-    <script src="<?= base_url('media/sbadmin2/js/sb-admin-2.min.js') ?>" type="text/javascript"></script>
+  </div>
+<script src="<?= base_url('media/sbadmin2/js/sb-admin-2.min.js') ?>" type="text/javascript"></script>
 </body>
-

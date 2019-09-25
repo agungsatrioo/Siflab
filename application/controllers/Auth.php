@@ -34,7 +34,6 @@ class Auth extends MY_Controller {
         $data['form_close'] = form_close();
         $data['error']      = $this->session->flashdata('error');
 
-
         $this->makeview('auth/v_login',$data);
     }
     

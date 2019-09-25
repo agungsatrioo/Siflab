@@ -11,16 +11,15 @@ class Home extends MY_Controller {
     public function _remap($method, $params = array()) {
         $ulevel = $this->M_user->user()->siflab_user_level;
 
-        echo "<br>";
-        //print_r($this->uri->segments);
-
         if($method == "do_logout") $this->do_logout();
 
         switch($ulevel) {
             case parent::LEVEL_MAHASISWA:
+                $data['username'] = $this->M_user->user()->siflab_mhs_name;
+
                 switch($method) {
                     case "": case "index":
-                        $this->make_home_mhs();
+                        $this->make_home_mhs($data);
                         break;
 
                     case "up":
@@ -33,8 +32,7 @@ class Home extends MY_Controller {
         }
     }
 
-    private function make_home_mhs() {
-        $data['username'] = $this->M_user->user()->siflab_mhs_name;
+    private function make_home_mhs($data) {
         $this->make_dashboard("tile", '', $data);
     }
 

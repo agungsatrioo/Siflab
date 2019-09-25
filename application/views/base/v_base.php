@@ -8,8 +8,10 @@
         <meta name="author" content="">
         
         <title><?= @$title ?></title>
-        <link rel="stylesheet" href="<?= base_url('media/sbadmin2/css/sbadmin.css') ?>">
-        <link rel="stylesheet" href="<?= base_url('media/custom.css') ?>">
+        <?= link_tag(base_url('media/sbadmin2/css/sbadmin.css')) ?>
+        <?= link_tag(base_url('media/vendor/fontawesome-free/css/all.min.css')) ?>
+        <?= link_tag(base_url('media/custom.css')) ?>
+
         <?= @$additional_css ?>
     </head>
     <?= @$contents ?>

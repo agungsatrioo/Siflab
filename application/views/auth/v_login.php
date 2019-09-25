@@ -133,5 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
   </div>
+
+<script src="<?= base_url('media/jquery/jquery.min.js') ?>" type="text/javascript"></script>
 <script src="<?= base_url('media/sbadmin2/js/sb-admin-2.min.js') ?>" type="text/javascript"></script>
 </body>

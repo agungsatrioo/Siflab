@@ -7,13 +7,14 @@ class Home extends MY_Controller {
 
         if($this->M_user->user()==null) redirect(base_url("login"));
     }  
-    
-	public function index() {
-		$this->load->view('welcome_message');
-	}
-    
+
     public function _remap($method, $params = array()) {
         $ulevel = $this->M_user->user()->siflab_user_level;
+
+        echo "<br>";
+        //print_r($this->uri->segments);
+
+        if($method == "do_logout") $this->do_logout();
 
         switch($ulevel) {
             case parent::LEVEL_MAHASISWA:
@@ -21,9 +22,11 @@ class Home extends MY_Controller {
                     case "": case "index":
                         $this->make_home_mhs();
                         break;
-                    case "do_logout":
-                        $this->do_logout();
+
+                    case "up":
+
                         break;
+
                 }
                 break;
 

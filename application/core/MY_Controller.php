@@ -11,10 +11,6 @@ class MY_Controller extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->ci_minifier->init(0);
-    }    
-    
-    public function _remap($method, $params = array()) {
-        $this->make_404();
     }
 
     protected function makeview($page, array $data) {

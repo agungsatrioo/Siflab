@@ -2,42 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends MY_Controller {
-    function __construct() {
-        parent::__construct();
+    function index() {
+        $data['title'] = "Login";
+        $data['my_css'] = link_tag(base_url('media/blog.css'));
 
-        if($this->M_user->user()==null) redirect(base_url("login"));
-    }  
-
-    public function _remap($method, $params = array()) {
-        $ulevel = $this->M_user->user()->siflab_user_level;
-
-        if($method == "do_logout") $this->do_logout();
-
-        switch($ulevel) {
-            case parent::LEVEL_MAHASISWA:
-                $data['username'] = $this->M_user->user()->siflab_mhs_name;
-
-                switch($method) {
-                    case "": case "index":
-                        $this->make_home_mhs($data);
-                        break;
-
-                    case "up":
-
-                        break;
-
-                }
-                break;
-
-        }
-    }
-
-    private function make_home_mhs($data) {
-        $this->make_dashboard("tile", '', $data);
-    }
-
-    private function do_logout() {
-        $this->M_user->logout();
-        redirect(base_url("login"));
+        $this->makeview('homepage/v_home',$data);
     }
 }

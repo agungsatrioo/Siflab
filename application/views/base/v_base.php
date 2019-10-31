@@ -12,7 +12,9 @@
         <?= link_tag(base_url('media/vendor/fontawesome-free/css/all.min.css')) ?>
         <?= link_tag(base_url('media/custom.css')) ?>
 
-        <?= @$additional_css ?>
+        <?= @$my_css ?>
     </head>
-    <?= @$contents ?>
+    <body <?= @$body_contents ?>>
+        <?= @$contents ?>
+    </body>
 </html>
